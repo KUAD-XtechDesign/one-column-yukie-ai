@@ -1,84 +1,90 @@
-<!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- 必要なライブラリをネット上から直接参照 CDN -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.rawgit.com/filipelinhares/ress/master/dist/ress.min.css"/>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
 
-    <!-- 自分のcss -->
-    <link rel="stylesheet" href="./css/style05.css" />
-    <!-- 自分のjs -->
-    <script src="./js/script05.js"></script>
-    <title>sample05</title>
-  </head>
-  <body>
-    <div class="wrapper">
-      <div class="each_work">
-        <div id="img01" class="img_button"><img src="./images/html.jpg"></div>
-        <div id="content01" class="content">
-          <div class="txt_img">
-            <div class="img">
-              <img src="./images/dummy.png" alt="ダミー">
-            </div>
-            <div class="txt">
-              <h2>htmlに関しての内容</h2>
-              <div>
-                <p>htmlはhyper text markup languageを意味しています。</p>
-                <p>
-                  HTML (HyperText Markup Language) はウェブのもっとも基本的な構成要素です。 <br>HTML はウェブページの基本レイアウトに従ってウェブページのコンテンツを記述し定義するものです。 HTML に隣接する他の技術としては、ウェブページの表示や表現を記述するもの (CSS) または機能や振る舞いを記述するもの (JavaScript) があります。
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="close_button">閉じる</div>
-        </div>
-      </div>
+body{
+  line-height: 2;
+  font-family: 'Noto Sans JP', sans-serif;
+}
 
-      <div class="each_work">
-        <div id="img02" class="img_button"><img src="./images/css.jpg"></div>
-        <div id="content02" class="content">
-          <div class="txt_img">
-            <div class="txt">
-              <h2>CSSに関しての内容</h2>
-              <div>
-                <p>CSS はCascading Style Sheetsを意味しています。</p>
-                <p>
-                  HTML のように、CSS は本当のプログラミング言語ではありません。またマークアップ言語でもありません。CSS はスタイルシート言語です。つまり HTML 文書の要素に選択的にスタイルを適用できます。
-                </p>
-              </div>
-            </div>
-            <div class="img">
-              <img src="./images/dummy.png" alt="ダミー">
-            </div>
-          </div>
-          <div class="close_button">閉じる</div>
-        </div>
-      </div>
+.wrapper{
+  background-color: #fff;
+}
 
-      <div class="each_work">
-        <div id="img03" class="img_button"><img src="./images/js.jpg"></div>
-        <div id="content03" class="content">
-          <div class="txt_img">
-            <div class="img">
-              <img src="./images/dummy.png" alt="ダミー">
-            </div>
-            <div class="txt">
-              <h2>jsに関しての内容</h2>
-              <div>
-                <p>jsはJavaScriptを意味しています。</p>
-                <p>
-                  JavaScript はウェブページにて複雑な機能をできるようにするプログラミング言語です —ウェブページが読み込まれるたびに、単にあなたが見ている静的な情報を表示する以上のことをしています
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="close_button">閉じる</div>
-        </div>
-      </div>
+img{
+  max-width: 100%;
+}
 
-    </div>
-  </body>
-</html>
+.img_button img{
+  display: block;
+}
+
+.content{
+  display: none;
+  position: relative;
+  padding: 30px;
+  background-color: rgb(250, 235, 215,0.2);
+  margin-bottom: 50px;
+}
+
+.close_button{
+  display: inline-block;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  background-color: rgb(255, 136, 0);
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  transition: 0.5s all;
+}
+
+.close_button:hover{
+  transform: rotate(360deg);
+}
+
+.img_button{
+  transition: 0.5s all;
+  cursor: pointer;
+  max-width: 900px;
+  margin: 0 auto 50px;
+  position: relative;
+}
+
+.img_button::after{
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0;
+  transition: 0.5s opacity;
+}
+
+.img_button:hover::after{
+  opacity: 1;
+}
+
+/* 横並び追加 */
+.txt_img{
+  display: flex;
+  max-width: 900px;
+  margin: 0 auto;
+  min-height: 80vh;
+}
+
+.img{
+  width: 20%;
+}
+
+.txt{
+  width: 80%;
+  padding: 10px;
+}
+
+#img01{
+  margin-top: 100px;
+}
