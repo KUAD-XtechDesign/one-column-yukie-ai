@@ -50,7 +50,7 @@ img{
   padding: 30px;
   margin: 10px 0;
   border-radius: 5px;
-  background-color: rgb(16, 4, 44);
+  background-color: rgb(25, 6, 68);
   color: #fff;
   cursor: pointer;
   position: absolute;
@@ -93,6 +93,7 @@ img{
   max-width: 900px;
   margin: 0 auto;
   min-height: 80vh;
+  color: #aa0a8f;
 }
 
 .img{
