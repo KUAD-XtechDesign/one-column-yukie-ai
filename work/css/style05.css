@@ -58,7 +58,7 @@ img{
   position: absolute;
   right: 30px;
   top: 30px;
-  transition: 0.5s all;
+  transition: 1.3s all;
 }
 
 .close_button:hover{
