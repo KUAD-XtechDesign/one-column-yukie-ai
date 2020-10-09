@@ -13,6 +13,7 @@ body{
   bottom: 0%;
   min-width: 100%;
   min-height: 100%;
+  
 }
 
 .videocontent {
@@ -22,6 +23,7 @@ body{
   font-size: 4rem;
   padding-top: 200px;
   padding-left: 50px;
+  line-height: 370%;
 } 
 
 
